@@ -26,6 +26,7 @@ Invoice-INFO-APP is an application built to get invoice data such as
 - Python Libraries : requests, Flask == 2.0.3, Jinja2 == 3.1.1
 
 Install all requirements, create an AWS account ( a free tier account is sufficient for this project ), login with credentials, create a user with necessary IAM permissions and download the credentials.csv file.
+
 ​https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
 
 ## Project Structure:
@@ -53,19 +54,21 @@ Docker version 20.10.16, build aa7e414
   - Once the repository is created select the repository and click on *View push commands* for build and push of docker file.
 - **Step 2:** Configure AWS profile with the commands:
   -Access the terminal and check for AWS CLI installed with : aws --version
+  
   aws-cli/2.7.18 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
   - Navigate in terminal to Invoice-Info-APP directory and run the below commands
   -aws configure
   -aws configure set region us-west-1 --profile invoiceuser
   -aws configure list-profiles
   -setx AWS_PROFILE invoiceuser
-  For more details on CLI configuration check here [aws CLI congig] (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-precedence)
+  For more details on CLI configuration check here: [aws CLI congig] (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-precedence)
 - **Step 3:** Run Docker Commands 
-  - Once aws profile is configured run the below docker commands from the *View push commands*
-  - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<___id___> (Paste your ECR commands)
+  - Once aws profile is configured run the below docker commands from the **View push commands**
+  - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<id> (Paste your ECR commands)
   - docker build -t invoiceapp .
   - docker tag invoiceapp:latest public.ecr.aws/<id>/invoiceapp:latest
   - docker push public.ecr.aws/<id>/invoiceapp:latest
+  
 This pushes the build docker image of the app into AWS ECR.
 
 
