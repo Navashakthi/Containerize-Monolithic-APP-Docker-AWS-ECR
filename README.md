@@ -66,7 +66,7 @@ The python flask App files and dependents are present in this folder structure
   - docker tag invoiceapp:latest public.ecr.aws/<id>/invoiceapp:latest
   - docker push public.ecr.aws/<id>/invoiceapp:latest
   
-This pushes the build docker image of the app into AWS ECR.
+This pushes the built docker image of the app into AWS ECR.
 
 
 
