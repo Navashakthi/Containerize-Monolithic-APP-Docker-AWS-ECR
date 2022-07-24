@@ -51,7 +51,6 @@ The python flask App files and dependents are present in this folder structure
   - Once the repository is created select the repository and click on *View push commands* for build and push of docker file.
 - **Step 2:** Configure AWS profile with the commands:
   -Access the terminal and check for AWS CLI installed with : aws --version
-  
   aws-cli/2.7.18 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
   - Navigate in terminal to Invoice-Info-APP directory and run the below commands
   -aws configure
@@ -66,7 +65,7 @@ The python flask App files and dependents are present in this folder structure
   - docker tag invoiceapp:latest public.ecr.aws/<id>/invoiceapp:latest
   - docker push public.ecr.aws/<id>/invoiceapp:latest
   
-This pushes the built docker image of the app into AWS ECR.
+  This pushes the built docker image of the app into AWS ECR.
 
 
 
