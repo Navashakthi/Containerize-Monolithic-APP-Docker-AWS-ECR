@@ -8,7 +8,7 @@ The term Monolith means composed all in one piece. The Monolithic application de
 It is an architecture where the software components are inter-dependent and tightly coupled.
 
 ## Project Use-Case
-Invoice-INFO-APP is an application built to get invoice data such as
+Invoice-Info-APP is an application built to get invoice data such as
 -- Total invoices of the month
 -- Invoices Pending payment
 -- Invoices with payment processed
