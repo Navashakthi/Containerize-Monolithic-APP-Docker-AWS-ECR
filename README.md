@@ -1,4 +1,4 @@
-# Deploying a Monolithic service on AWS 
+# Deploying a Monolithic Application on AWS 
 
 Step by step process of deploying a Monolithic Application ( Python Flask APP ) to a Docker container on AWS
 ### > Monolithic Architecture : 
