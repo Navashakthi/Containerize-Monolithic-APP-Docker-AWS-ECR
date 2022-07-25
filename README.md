@@ -1,6 +1,6 @@
 # Containerize a Monolithic Application using Docker 
 
-Step by step process of deploying a Monolithic Application ( Python Flask APP ) to a Docker container on AWS
+Step by step process of deploying a Monolithic Application ( Python Flask APP ) to a Docker container.
 ### > Monolithic Architecture : 
 
 The term Monolith means composed all in one piece. The Monolithic application describes a single-tiered software application in which different components combined into a single program from a single platform
