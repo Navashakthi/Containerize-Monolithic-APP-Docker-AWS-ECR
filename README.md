@@ -1,4 +1,4 @@
-# Deploying a Monolithic Application on AWS 
+# Containerize a Monolithic Application using Docker 
 
 Step by step process of deploying a Monolithic Application ( Python Flask APP ) to a Docker container on AWS
 ### > Monolithic Architecture : 
@@ -66,7 +66,6 @@ The python flask App files and dependents are present in this folder structure
   - docker push public.ecr.aws/<id>/invoiceapp:latest
   
   This pushes the built docker image of the app into AWS ECR.
-
 
 
 
