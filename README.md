@@ -36,13 +36,18 @@ The python flask App files and dependents are present in this folder structure
 - .dockerignore
 
 ## Configure and Containerize the Application in Local Machine
-- Check if docker is successfully installed in the system with : docker --version : Docker version 20.10.16, build aa7e414
+- Check if docker is successfully installed in the system with;
+```
+$ docker --version
+Docker version 20.10.16, build aa7e414
+```
 - Download the code from GitHub repository to your local environment
-- In the Invoice-Info-APP directory run the following commands:
-  - docker build -t invoiceapp
-  - docker run -p 5000:5000 invoiceapp
- 
- This creates a docker image and runs in a docker container in local machine.
+- In the Invoice-Info-APP directory run the following commands:  
+This creates a docker image and runs in a docker container in local machine.
+```
+ $ docker build -t invoiceapp
+ $ docker run -p 5000:5000 invoiceapp
+```
 
 ## Configure and Containerize the Application in AWS
 - **Step 1:** Open AWS Account with User account
@@ -51,21 +56,28 @@ The python flask App files and dependents are present in this folder structure
   - On creating repository enter repository name and details
   - Once the repository is created select the repository and click on *View push commands* for build and push of docker file.
 - **Step 2:** Configure AWS profile with the commands:
-  -Access the terminal and check for AWS CLI installed with : aws --version
-  aws-cli/2.7.18 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
-  - Navigate in terminal to Invoice-Info-APP directory and run the below commands
+  -Access the terminal and check for AWS CLI installed with : 
+  ```
+  $ aws --version
+  $ aws-cli/2.7.18 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
+  ```
+  - Navigate in terminal to Invoice-Info-APP directory and run the below commands;
+  For more details on CLI configuration check here [AWS CLI Config](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-precedence)
+  ```
   -aws configure
   -aws configure set region us-west-1 --profile invoiceuser
   -aws configure list-profiles
   -setx AWS_PROFILE invoiceuser
-  For more details on CLI configuration check here [AWS CLI Config](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-precedence)
+  ```
+
 - **Step 3:** Run Docker Commands 
   - Once aws profile is configured run the below docker commands from the **View push commands**
-  - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<id> (Paste your ECR commands)
-  - docker build -t invoiceapp .
-  - docker tag invoiceapp:latest public.ecr.aws/<id>/invoiceapp:latest
-  - docker push public.ecr.aws/<id>/invoiceapp:latest
-  
+  ```
+  $ aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<id> (Paste your ECR commands)
+  $ docker build -t invoiceapp .
+  $ docker tag invoiceapp:latest public.ecr.aws/<id>/invoiceapp:latest
+  $ docker push public.ecr.aws/<id>/invoiceapp:latest
+  ```
   This pushes the built docker image of the app into AWS ECR.
 
 
