@@ -54,7 +54,8 @@ This creates a docker image and runs in a docker container in local machine.
   - Navigate to the **Amazon ECR console**.
   - On the repository page, select *Create Repository* 
   - On creating repository enter repository name and details
-  - Once the repository is created select the repository and click on *View push commands* for build and push of docker file.
+  - Once the repository is created select the repository and click on **View push commands** for build and push of docker file.
+  
 - **Step 2:** Configure AWS profile with the commands:
   -Access the terminal and check for AWS CLI installed with : 
   ```
@@ -71,7 +72,7 @@ This creates a docker image and runs in a docker container in local machine.
   ```
 
 - **Step 3:** Run Docker Commands 
-  - Once aws profile is configured run the below docker commands from the **View push commands**
+  - Once aws profile is configured run the below docker commands from the **View push commands** mentioned in step1.
   ```
   $ aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/<id> (Paste your ECR commands)
   $ docker build -t invoiceapp .
