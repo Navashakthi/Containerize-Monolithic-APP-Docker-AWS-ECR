@@ -3,7 +3,7 @@
 Step by step process of deploying a Monolithic Application ( Python Flask APP ) to a Docker container.
 ### > Monolithic Architecture : 
 
-The term Monolith means composed all in one piece. The Monolithic application describes a single-tiered software application in which different components combined into a single program from a single platform
+The term Monolith means composed all in one piece. The Monolithic application describes a single-tiered software application in which different components of the software are combined into a single program from a single platform.
 
 It is an architecture where the software components are inter-dependent and tightly coupled.
 
