@@ -41,7 +41,8 @@ The python flask App files and dependents are present in this folder structure
 - In the Invoice-Info-APP directory run the following commands:
   - docker build -t invoiceapp
   - docker run -p 5000:5000 invoiceapp
-  This creates the docker build and run in the local machine.
+ 
+ This creates the docker build and run in the local machine.
 
 ## Configure and Containerize the Application in AWS
 - **Step 1:** Open AWS Account with User account
