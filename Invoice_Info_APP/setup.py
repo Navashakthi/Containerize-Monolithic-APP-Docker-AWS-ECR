@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(name="microservices",
       version = "0.1",
-      description = "Example of Microservices using Flask",
+      description = "Example of Monolithic application using Flask",
       author = "Navashakthi Gnanasekaran",
       platforms = ["any"],
       packages = find_packages(),
